@@ -1,0 +1,109 @@
+﻿@using Covid_19_Application.Models;
+@model CountryAndTotal
+@{
+    ViewBag.Title = "Index";
+}
+<div style="position:relative">
+    <img src="https://www.widener.edu/sites/default/files/2020-03/Coronavirus_Graphic_Page_1200x750.png" width="100%"height="500px" />
+
+    
+    <p style="position:absolute; bottom:50%; left:50%; transform:translate(-50%, -50%);color:white;font-size:50px">COVID-19</p>
+    <p style="position:absolute;top:50%; bottom:50%; left:50%; transform:translate(-50%, -50%);color:white;font-size:18px">A website provides you with covid-19 updates around the world</p>
+   
+</div>
+<br />
+<br />
+
+    <h4>World Total Statistics</h4>
+<br />
+<br />
+
+<div style="display:grid; gap: 50px 100px; grid-template-columns: auto auto auto; padding:10px">
+            <div style="display:flex; margin-right:15% " class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayNameFor(model => model.worldTotal.TotalConfirmed)</h5>
+
+                    <p class="card-text">@Html.DisplayFor(model => model.worldTotal.TotalConfirmed) </p>
+
+                </div>
+            </div>
+    <div style="display:flex; margin-right:15%" class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        @Html.DisplayNameFor(model => model.worldTotal.TotalDeaths)
+                    </h5>
+
+                    @Html.DisplayFor(model => model.worldTotal.TotalDeaths)
+                    <p class="card-text"> </p>
+
+                </div>
+            </div>
+    <div style="display:flex; margin-right:15% ;" class="card" style="width: 18rem;">
+                <div class="card-body">
+                  
+                    <h5 class="card-title">
+                @Html.DisplayNameFor(model => model.worldTotal.TotalRecovered)
+                    </h5>
+
+                    @Html.DisplayFor(model => model.worldTotal.TotalRecovered)
+                    <p class="card-text"> </p>
+
+                </div>
+            </div>
+
+</div>
+
+
+<br />
+<br />
+
+<h4>Get Statistics for a specific country</h4>
+<br />
+<br />
+
+<form class="mb-3" asp-controller="Home" asp-action="Index" method="get">
+    <lable >Country</lable>
+    <input type="text" name="Country" />
+
+    <lable>From </lable>
+    <input type="date" name="FromDate" />
+
+    <label>To</label>
+    <input type="date" name="ToDate" />
+
+    <button type="submit" class="btn btn-danger">Search</button>
+
+</form>
+
+
+
+
+    <div style="display:grid; gap: 50px 100px; grid-template-columns: auto auto auto; padding:10px">
+
+
+@foreach (var item in Model.countryDto)
+{
+       
+            <div style="display:flex; margin-right:20%" class="card" >
+
+                    <div class="card-body">
+                    <p class="card-text">
+                        @Html.DisplayNameFor(model => model.countryDto.ElementAt(0).Cases)
+                        <br />
+                        @Html.DisplayFor(modelItem => item.Cases)
+                        <br/>
+                         @Html.DisplayNameFor(model => model.countryDto.ElementAt(0).Date)
+                        <br/>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </p>
+       
+                </div>
+            </div>
+       
+}
+   </div>
+
+
+
+
+

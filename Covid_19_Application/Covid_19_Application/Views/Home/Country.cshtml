@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Covid_19_Application.Models.DTOs.SpecificCountryDTO>
+
+@{
+    ViewData["Title"] = "Country";
+}
+
+<div style="position:relative">
+    <img src="https://www.widener.edu/sites/default/files/2020-03/Coronavirus_Graphic_Page_1200x750.png" width="100%"height="500px" />
+
+
+    <p style="position:absolute; bottom:50%; left:50%; transform:translate(-50%, -50%);color:white;font-size:50px">COVID-19</p>
+    <p style="position:absolute;top:50%; bottom:50%; left:50%; transform:translate(-50%, -50%);color:white;font-size:18px">A website provides you with covid-19 updates around the world</p>
+
+</div>
+<br />
+<br />
+<h1>Country</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cases)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cases)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+

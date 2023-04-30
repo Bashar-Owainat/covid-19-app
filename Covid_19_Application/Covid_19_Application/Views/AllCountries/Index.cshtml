@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Covid_19_Application.Models.DTOs.MyRecord>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div style="position:relative">
+    <img src="https://www.widener.edu/sites/default/files/2020-03/Coronavirus_Graphic_Page_1200x750.png" width="100%"height="500px" />
+
+    
+    <p style="position:absolute; bottom:50%; left:50%; transform:translate(-50%, -50%);color:white;font-size:50px">COVID-19</p>
+    <p style="position:absolute;top:50%; bottom:50%; left:50%; transform:translate(-50%, -50%);color:white;font-size:18px">A website provides you with covid-19 updates around the world</p>
+   
+</div>
+<br />
+<br />
+
+<h1>All Countries</h1>
+
+<div style="display:grid; gap: 50px 100px; grid-template-columns: auto auto auto; padding:10px;">
+
+
+    @foreach (var item in Model)
+{
+       
+            <div style="display:flex; margin-right:20%" class="card" >
+
+                    <div class="card-body">
+                    <p class="card-text">
+                    @Html.DisplayFor(modelItem => item.Country):   @Html.DisplayNameFor(model => model.Country)
+         
+                        <br/>
+                    @Html.DisplayNameFor(model => model.TotalConfirmed): @Html.DisplayFor(modelItem => item.TotalConfirmed)
+
+                        <br/>
+
+                    @Html.DisplayNameFor(model => model.TotalDeaths): @Html.DisplayFor(modelItem => item.TotalDeaths)
+
+                    <br />
+
+                    @Html.DisplayNameFor(model => model.TotalRecovered):  @Html.DisplayFor(modelItem => item.TotalRecovered)
+
+                    <br />
+                    @Html.DisplayNameFor(model => model.Date):   @Html.DisplayFor(modelItem => item.Date)
+
+                    <br/>
+                   
+                     <form asp-action="Create" asp-controller="AllCountries" method="post" enctype="multipart/form-data">
+
+                        <input hidden asp-for="@item.ID" name="ID" />
+                        <input hidden asp-for="@item.Country" name="Country" />
+                        <input hidden asp-for="@item.TotalConfirmed" name="TotalConfirmed" />
+                        <input hidden asp-for="@item.TotalDeaths" name="TotalDeaths" />
+                        <input hidden asp-for="@item.TotalRecovered" name="TotalRecovered" />
+                        <input hidden asp-for="@item.Date" name="Date" />
+
+                        <button class="btn btn-danger w-50" type="submit" style="font-size:13px;">Add To My Records</button>
+
+                    </form>
+
+                    </p>
+       
+                </div>
+            </div>
+       
+}
+</div>
