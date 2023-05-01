@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Covid19Application" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\LEGION\\source\\repos\\covid-19-app\\Covid_19_Application\\Covid_19_Application\\obj\\Release\\net5\.0\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="Covid_19_Application.Data.CovidDbContext" description="" value="Data Source=tcp:covid-19-applicationdbserver.database.windows.net,1433;Initial Catalog=Covid_19_Application_db;User Id=bashar@covid-19-applicationdbserver;Password=Janvali$inn0cent" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\LEGION\\source\\repos\\covid-19-app\\Covid_19_Application\\Covid_19_Application\\obj\\Release\\net5\.0\\PubTmp\\EFSQLScripts\\Covid_19_Application\.Data\.CovidDbContext\.sql$" />
+  </parameter>
+</parameters>

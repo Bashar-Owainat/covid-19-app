@@ -11,5 +11,6 @@
     <WebStackScaffolding_IsReferencingScriptLibrariesSelected>True</WebStackScaffolding_IsReferencingScriptLibrariesSelected>
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_DbContextTypeFullName>Covid_19_Application.Data.CovidDbContext</WebStackScaffolding_DbContextTypeFullName>
+    <NameOfLastUsedPublishProfile>C:\Users\LEGION\source\repos\covid-19-app\Covid_19_Application\Covid_19_Application\Properties\PublishProfiles\Covid19Application - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

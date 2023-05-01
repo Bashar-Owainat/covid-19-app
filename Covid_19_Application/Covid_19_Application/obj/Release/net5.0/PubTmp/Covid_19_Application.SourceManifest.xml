@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\LEGION\source\repos\covid-19-app\Covid_19_Application\Covid_19_Application\obj\Release\net5.0\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\LEGION\source\repos\covid-19-app\Covid_19_Application\Covid_19_Application\obj\Release\net5.0\PubTmp\EFSQLScripts\Covid_19_Application.Data.CovidDbContext.sql" />
+</sitemanifest>
