@@ -5977,19 +5977,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LEGION\\.nuget\\packages\\": {}
+    "C:\\Users\\b.owainat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LEGION\\source\\repos\\covid-19-app\\Covid_19_Application\\Covid_19_Application\\Covid_19_Application.csproj",
+      "projectUniqueName": "C:\\Users\\b.owainat\\source\\repos\\covid-19-app\\Covid_19_Application\\Covid_19_Application\\Covid_19_Application.csproj",
       "projectName": "Covid_19_Application",
-      "projectPath": "C:\\Users\\LEGION\\source\\repos\\covid-19-app\\Covid_19_Application\\Covid_19_Application\\Covid_19_Application.csproj",
-      "packagesPath": "C:\\Users\\LEGION\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LEGION\\source\\repos\\covid-19-app\\Covid_19_Application\\Covid_19_Application\\obj\\",
+      "projectPath": "C:\\Users\\b.owainat\\source\\repos\\covid-19-app\\Covid_19_Application\\Covid_19_Application\\Covid_19_Application.csproj",
+      "packagesPath": "C:\\Users\\b.owainat\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\b.owainat\\source\\repos\\covid-19-app\\Covid_19_Application\\Covid_19_Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\LEGION\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\b.owainat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5997,6 +5997,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6057,12 +6058,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.17, 5.0.17]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -6071,7 +6066,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
